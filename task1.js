@@ -68,13 +68,45 @@
 // }
 
 //Get Element By TagName
-var li = document.getElementsByTagName("li");
-console.log(li);
-console.log(li[1]);
-li[1].textContent = "Hello 2";
-li[1].style.fontWeight = "bold";
-li[2].style.backgroundColor = "green";
+// var li = document.getElementsByTagName("li");
+// console.log(li);
+// console.log(li[1]);
+// li[1].textContent = "Hello 2";
+// li[1].style.fontWeight = "bold";
+// li[2].style.backgroundColor = "green";
 
-for (var i = 0; i < li.length; i++) {
-  li[i].style.fontWeight = "bold";
-}
+// for (var i = 0; i < li.length; i++) {
+//   li[i].style.fontWeight = "bold";
+// }
+
+//Query Selector
+// var header = document.querySelector("#main-header");
+// console.log(header);
+// header.style.borderBottom = "4px solid black";
+
+// var input = document.querySelector("input");
+// input.value = "Hello";
+
+// var submit = document.querySelector('input[type="submit"]');
+// submit.value = "SEND";
+
+// var item = document.querySelector(".list-group-item");
+// item.style.color = "red";
+
+// var lastitem = document.querySelector(".list-group-item:last-child");
+// lastitem.style.color = "blue";
+
+//querySelector All
+
+// var titles = document.querySelectorAll(".title");
+// console.log(titles);
+// titles[0].textContent = "Hello";
+
+// var odd = document.querySelectorAll("li:nth-child(odd)");
+// for (var i = 0; i < odd.length; i++) {
+//   odd[i].style.backgroundColor = "grey";
+// }
+
+var li = document.querySelectorAll("li");
+li[1].style.backgroundColor = "green";
+li[2].style.display = "none";
