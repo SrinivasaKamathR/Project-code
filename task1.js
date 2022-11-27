@@ -56,13 +56,25 @@
 // header.style.borderBottom = "solid 3px black";
 
 //get Elements by className
-var items = document.getElementsByClassName("list-group-item");
+// var items = document.getElementsByClassName("list-group-item");
 // console.log(items);
-console.log(items[1]);
-items[1].textContent = "Hello 2";
-items[1].style.fontWeight = "bold";
-items[2].style.backgroundColor = "green";
+// console.log(items[1]);
+// items[1].textContent = "Hello 2";
+// items[1].style.fontWeight = "bold";
+// items[2].style.backgroundColor = "green";
 
-for (var i = 0; i < items.length; i++) {
-  items[i].style.fontWeight = "bold";
+// for (var i = 0; i < items.length; i++) {
+//   items[i].style.fontWeight = "bold";
+// }
+
+//Get Element By TagName
+var li = document.getElementsByTagName("li");
+console.log(li);
+console.log(li[1]);
+li[1].textContent = "Hello 2";
+li[1].style.fontWeight = "bold";
+li[2].style.backgroundColor = "green";
+
+for (var i = 0; i < li.length; i++) {
+  li[i].style.fontWeight = "bold";
 }
