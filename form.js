@@ -7,10 +7,24 @@ const btn = document.querySelector("btn");
 
 myForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  localStorage.setItem("name", nameInput.value);
-  //   localStorage.setItem("email", email.value);
+
+  // localStorage.setItem("name", nameInput.value);
+  // localStorage.setItem("email", email.value);
   //   console.log(localStorage.getItem("name"));
   //   console.log(localStorage.removeItem("email"));
+  let userObj = {
+    name: nameInput.value,
+    email: email.value,
+  };
+  //object key must be serilize
+  let serilizeObj = JSON.stringify(userObj);
+  console.log(serilizeObj);
+  localStorage.setItem("userObj", serilizeObj);
+  // console.log(localStorage);
+
+  let deserilizeObj = JSON.parse(localStorage.getItem("userObj"));
+  console.log(deserilizeObj);
+
   if (nameInput.value === "" || email.value === "") {
     msg.classList.add("error");
     msg.innerHTML = "Please enter all fields";

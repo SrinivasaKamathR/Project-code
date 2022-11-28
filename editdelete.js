@@ -33,6 +33,15 @@ function addItem(e) {
   //appned button to li
   li.appendChild(deleteBtn);
 
+  // Create edit button element
+  var editBtn = document.createElement("button");
+  // Add clases to del button
+  editBtn.className = "btn btn-danger btn-sm float-right delete";
+  // Append text node
+  editBtn.appendChild(document.createTextNode("edit"));
+  // Append button to li
+  li.appendChild(editBtn);
+
   //append to list
   itemList.appendChild(li);
 }
