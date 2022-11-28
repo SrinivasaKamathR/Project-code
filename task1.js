@@ -198,12 +198,12 @@
 
 //task Now go head and add HEllo word before Item 1
 
-var newP = document.createElement("p");
-var text = document.createTextNode("HEllo");
+// var newP = document.createElement("p");
+// var text = document.createTextNode("HEllo");
 
-newP.appendChild(text);
+// newP.appendChild(text);
 
-var ul = document.querySelector("ul");
-var li = document.querySelector("li");
-newP.style.fontSize = "30px";
-ul.insertBefore(newP, li);
+// var ul = document.querySelector("ul");
+// var li = document.querySelector("li");
+// newP.style.fontSize = "30px";
+// ul.insertBefore(newP, li);
