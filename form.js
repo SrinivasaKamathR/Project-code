@@ -42,6 +42,33 @@ myForm.addEventListener("submit", (e) => {
     li.appendChild(
       document.createTextNode(`${nameInput.value} : ${email.value}`)
     );
+    //edit or delete button
+    const a1 = document.createElement("input");
+    a1.type = "button";
+    a1.value = "Edit";
+    a1.addEventListener("click", () => {
+      // nameInput = userObj.name;
+      // email = userObj.email;
+      localStorage.removeItem(userObj.name, userObj.name);
+      li.remove();
+    });
+    a1.className = "delete";
+    a1.style.border = "2px solid blue";
+    li.appendChild(a1);
+
+    const a = document.createElement("input");
+    a.type = "button";
+    a.value = "delete";
+    a.addEventListener("click", () => {
+      localStorage.removeItem(userObj.name, userObj.name);
+      // axios.delete(`${apiendpoint}/registeruser/${object._id}`);
+      li.remove();
+    });
+    a.className = "delete";
+    a.style.border = "2px solid red";
+
+    li.appendChild(a);
+
     userList.appendChild(li);
   }
 
