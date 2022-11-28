@@ -18,12 +18,12 @@ myForm.addEventListener("submit", (e) => {
   };
   //object key must be serilize
   let serilizeObj = JSON.stringify(userObj);
-  console.log(serilizeObj);
-  localStorage.setItem("userObj", serilizeObj);
+  // console.log(serilizeObj);
+  localStorage.setItem(userObj.name, serilizeObj);
   // console.log(localStorage);
 
-  let deserilizeObj = JSON.parse(localStorage.getItem("userObj"));
-  console.log(deserilizeObj);
+  // let deserilizeObj = JSON.parse(localStorage.getItem("userObj"));
+  // console.log(deserilizeObj);
 
   if (nameInput.value === "" || email.value === "") {
     msg.classList.add("error");
@@ -32,6 +32,12 @@ myForm.addEventListener("submit", (e) => {
       msg.remove();
     }, 3000);
   } else {
+    // const li = document.createElement("li");
+    // li.appendChild(
+    //   document.createTextNode(`${nameInput.value} : ${email.value}`)
+    // );
+    // userList.appendChild(li);
+    //itertaing on local storage
     const li = document.createElement("li");
     li.appendChild(
       document.createTextNode(`${nameInput.value} : ${email.value}`)
