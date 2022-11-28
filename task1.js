@@ -107,6 +107,103 @@
 //   odd[i].style.backgroundColor = "grey";
 // }
 
-var li = document.querySelectorAll("li");
-li[1].style.backgroundColor = "green";
-li[2].style.display = "none";
+// var li = document.querySelectorAll("li");
+// li[1].style.backgroundColor = "green";
+// li[2].style.display = "none";
+
+//traversing DOM
+// var itemList = document.querySelector("#items");
+
+//parentNode
+// console.log(itemList.parentNode);
+// itemList.parentNode.style.backgroundColor = "grey";
+// console.log(itemList.parentNode.parentNode);
+// console.log(itemList.parentNode.parentNode.parentNode);
+
+//parent Element--same as above
+// console.log(itemList.parentElement);
+// itemList.parentElement.style.backgroundColor = "grey";
+// console.log(itemList.parentElement.parentNode);
+// console.log(itemList.parentElement.parentElement.parentElement);
+
+//childNodes--includes space
+// console.log(itemList.childNodes);
+
+//Html collection no space included
+// console.log(itemList.children);
+// console.log(itemList.children[1]);
+// itemList.children[0].style.backgroundColor = "green";
+
+//firstChild--includes space
+// console.log(itemList.firstChild);
+
+//firstElemetChild
+// console.log(itemList.firstElementChild);
+// itemList.firstElementChild.textContent = "hello";
+
+//lastChild
+//console.log(itemList.lastChild);
+
+//lastElemetCHild
+// console.log(itemList.lastElementChild);
+// itemList.lastElementChild.textContent = "hello";
+
+//nextSibling--space included
+// console.log(itemList.nextSibling);
+
+//nextElementsibling--space not included
+// console.log(itemList.nextElementSibling);
+
+//previousSibling
+// console.log(itemList.previousSibling);
+
+//previousElementSibling
+// console.log(itemList.previousElementSibling);
+// itemList.previousElementSibling.style.color = "green";
+
+//createElement
+//create div
+// var newDiv = document.createElement("div");
+
+//adding class
+// newDiv.className = "hello";
+//adding id
+// newDiv.id = "1";
+
+//add attribute
+// newDiv.setAttribute("title", "helloDiv");
+
+//create textNode
+// var newDivtext = document.createTextNode("hello World");
+//adding content to div by append
+// newDiv.appendChild(newDivtext);
+// console.log(newDiv);
+
+//insert before
+// var header = document.querySelector("header .container");
+// var h1 = document.querySelector("header h1");
+// newDiv.style.fontSize = "30px";
+// header.insertBefore(newDiv, h1);
+
+//tasks-Now go head and add HEllo word before Item Liste
+// var newP = document.createElement("p");
+// var text = document.createTextNode("HEllo");
+
+// newP.appendChild(text);
+//insert
+// var header = document.querySelector("header .container");
+// var h1 = document.querySelector("header h1");
+// newP.style.fontSize = "30px";
+// header.insertBefore(newP, h1);
+
+//task Now go head and add HEllo word before Item 1
+
+var newP = document.createElement("p");
+var text = document.createTextNode("HEllo");
+
+newP.appendChild(text);
+
+var ul = document.querySelector("ul");
+var li = document.querySelector("li");
+newP.style.fontSize = "30px";
+ul.insertBefore(newP, li);
