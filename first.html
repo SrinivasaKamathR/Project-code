@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Sign Up</title>
+    <style>
+      form {
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bgimg">
+      <h1 style="text-align: center; color: orange">Book a call</h1>
+      <p style="text-align: center">
+        Book a call slot and our represntative wil call you within 1hr of
+        selected time
+      </p>
+      <hr />
+      <form action="#" onsubmit="onsignup(event)" style="text-align: center">
+        <label for="name">Name:</label><br />
+        <input type="text" placeholder="enter your name" id="name" /><br />
+        <label for="mail">Email:</label><br />
+        <input type="email" placeholder="e-mail" id="mail" /><br />
+        <label for="phonenumber">Phone Number:</label><br />
+        <input
+          type="number"
+          maxlength="10"
+          placeholder="enter your number"
+          id="phonenumber"
+        /><br />
+        <label for="time">Time for Call:</label><br />
+        <input type="date" />
+        <input type="time" /><br />
+        <button style="background-color: rgb(210, 216, 244)">Get a Call</button>
+      </form>
+      <script src="index.js"></script>
+    </div>
+    <script>
+      function onsignup(event) {
+        event.preventDefault();
+        console.log(event.target.name.value);
+        console.log(event.target.mail.value);
+        console.log(event.target.phonenumber.value);
+      }
+    </script>
+  </body>
+</html>
