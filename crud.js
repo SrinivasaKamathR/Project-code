@@ -61,6 +61,28 @@ function showonscreen(data) {
   delbtn.className = "delete-btn";
   delbtn.appendChild(document.createTextNode("Delete"));
   li.appendChild(delbtn);
+  //delete user
+  delbtn.addEventListener("click", () => {
+    axios
+      .get("https://crudcrud.com/api/f1d174572102491b86c8988b47cb380b/addUser")
+      .then((res) => {
+        console.log(res);
+        for (var i = 0; i < res.data.length; i++) {
+          if (li.innerHTML.indexOf(response.data[i].name) != -1) {
+            axios
+              .delete(
+                `https://crudcrud.com/api/f1d174572102491b86c8988b47cb380b/addUser/${res.data[i]._id}`
+              )
+              .then()
+              .catch((err) => console.log(err));
+          }
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    userList.removeChild(li);
+  });
 
   var edibtn = document.createElement("button");
   edibtn.className = "edit-btn";
